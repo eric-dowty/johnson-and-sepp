@@ -9,4 +9,10 @@ class HomeController < ApplicationController
   def structure
   end
 
+  def terms
+  end
+
+  def privacy
+  end
+
 end

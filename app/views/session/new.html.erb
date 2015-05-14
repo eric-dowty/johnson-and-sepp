@@ -1,7 +1,10 @@
-<h2>Login page</h2>
-
+<div class="info">
+  <p>
+    Login below or <%= link_to "create an account", users_path, method: :post %>
+  </p>
+</div>
 <%= form_for(:session, url: :login) do |f| %>
-  <%= f.text_field :email, placeholder: 'email address' %>
-  <%= f.password_field :password, placeholder: 'password' %>
-  <%= f.submit "Login" %>
+  <%= f.text_field :email, placeholder: 'email address' %><br><br>
+  <%= f.password_field :password, placeholder: 'password' %><br><br>
+  <%= f.submit "Login", class: 'btn btn-primary' %>
 <% end %>
