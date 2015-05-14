@@ -31,7 +31,7 @@ body {
 }
 
 .navbar-fixed-bottom {
-  height: 150px;
+  height: 100px;
 }
 
 .primary-view {
@@ -40,13 +40,60 @@ body {
 
 .landing-page {
   color: black;
-  margin-top: 15%;
+  margin-top: 5%;
   text-align: center;
   font-family: 'Old Standard TT', serif;
 }
 
-.landing-page img {
-  width: 75px;
+@media (min-width: 992px) { 
+  
+  .primary-view .title {
+    font-size: 350%;
+  }
+
+  .primary-view .header {
+    margin-top: 50px;
+    font-size: 250%;
+  }
+
+  .landing-page img {
+    width: 100px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width:991px) { 
+  
+  .primary-view .title {
+    font-size: 300%;
+  }
+
+  .primary-view .header {
+    margin-top: 50px;
+    font-size: 200%;
+  }
+
+  .landing-page img {
+    width: 75px;
+  }
+
+}
+
+@media (max-width: 767px) { 
+  
+  .primary-view .title {
+    font-size: 200%;
+  }
+
+  .primary-view .header {
+    margin-top: 50px;
+    font-size: 150%;
+  }
+
+  .landing-page img {
+    width: 50px;
+  }
+
 }
 
 .footer {
