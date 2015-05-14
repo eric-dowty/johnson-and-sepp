@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Johnson and Sepp Associates</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
+  <%= favicon_link_tag "favicon.ico" %>
+</head>
+<body>
+
+  <%= render partial: 'layouts/nav' %>
+
+  <div class="container-fluid">
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message, id: "flash_#{type}" %>
+    <% end %>
+
+    <%= yield %>
+  </div>
+
+  <%= render partial: 'layouts/footer' %>
+
+</body>
+</html>

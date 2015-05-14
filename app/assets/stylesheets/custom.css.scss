@@ -1,0 +1,18 @@
+body {
+  padding-top: 0px;
+  background: image-url("home-background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*font-family: monospace;*/
+  /*text-align: center;*/
+}
+
+.navbar-fixed-bottom {
+  height: 100px;
+}
+
+.index-item img {
+  width: 100px;
+}
