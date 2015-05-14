@@ -34,62 +34,115 @@ body {
   height: 100px;
 }
 
-.landing-page {
-  color: black;
-  text-align: center;
+.primary-view {
+  color: black;  
   font-family: 'Old Standard TT', serif;
+}
+
+.primary-view {
+  text-align: center;
 }
 
 @media (min-width: 992px) { 
   
+  .primary-view {
+     margin-top: 100px;
+  }
+
   .primary-view .title {
     font-size: 350%;
   }
 
   .primary-view .header {
-    margin-top: 50px;
     font-size: 250%;
   }
 
-  .landing-page img {
+  .primary-view img {
     width: 100px;
-    margin-top: 100px;
+  }
+
+  #invest-chart img {
+    width: 250px;
+  }
+
+  .primary-view .landing-page .header {
+    margin-top: 50px;
+  }
+
+  .primary-view .info p {
+    font-size: 150%;
+  }
+
+  .primary-view .info .page-contents {
+    margin-top: 50px;
   }
 
 }
 
 @media (min-width: 768px) and (max-width:991px) { 
   
+  .primary-view {
+     margin-top: 80px;
+  }
+
   .primary-view .title {
     font-size: 300%;
   }
 
   .primary-view .header {
-    margin-top: 50px;
     font-size: 200%;
   }
 
   .landing-page img {
     width: 75px;
-    margin-top: 80px;
+  }
+
+  #invest-chart img {
+    width: 200px;
+  }
+
+  .primary-view .landing-page .header {
+    margin-top: 35px;
+  }
+
+  .primary-view .info p {
+    font-size: 125%;
+  }
+
+  .primary-view .info .page-contents {
+    margin-top: 25px;
   }
 
 }
 
 @media (max-width: 767px) { 
   
+  .primary-view {
+     margin-top: 60px;
+  }
+
   .primary-view .title {
     font-size: 200%;
   }
 
   .primary-view .header {
-    margin-top: 50px;
     font-size: 150%;
   }
 
   .landing-page img {
     width: 50px;
-    margin-top: 60px;
+  }
+
+  #invest-chart img {
+    display: none;
+  }
+
+  .primary-view .landing-page .header {
+    margin-top: 15px;
+  }
+
+  .primary-view .info .page-contents {
+    margin-top: 10px;
   }
 
 }
