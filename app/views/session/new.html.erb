@@ -1,6 +1,6 @@
 <div class="info">
   <p>
-    Login below or <%= link_to "create an account", users_path, method: :post %>
+    Login below or <%= link_to "create an account", new_user_path, class: 'create-link' %>
   </p>
 </div>
 <%= form_for(:session, url: :login) do |f| %>

@@ -17,11 +17,25 @@ body {
     border-color: #000033 !important;
 }
 
+.btn-primary {
+  background-color: #000033;
+  border-color: #000033;
+}
+
 .nav-link {
     color: white !important;
 }
 
 .nav-link:hover {
+    color: #D0D0D0 !important;
+    text-decoration: none;
+}
+
+.create-link {
+    
+}
+
+.create-link:hover {
     color: #D0D0D0 !important;
     text-decoration: none;
 }

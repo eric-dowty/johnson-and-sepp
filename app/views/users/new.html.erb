@@ -1,0 +1,11 @@
+<div class="info">
+  <p>
+    Create Account
+  </p>
+</div>
+<%= form_for(@user) do |f| %>
+  <%= f.text_field :email, placeholder: 'email address' %><br><br>
+  <%= f.password_field :password, placeholder: 'password' %><br><br>
+  <%= f.password_field :password_confirmation, placeholder: 'confirm password' %><br><br>
+  <%= f.submit "Create", class: 'btn btn-primary' %>
+<% end %>
