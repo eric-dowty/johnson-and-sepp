@@ -9,8 +9,54 @@ body {
   /*text-align: center;*/
 }
 
+.brand-name {
+  font-family: 'Old Standard TT', serif;
+  font-size: 100%;
+}
+
+.navbar {
+    background-color: #000033 !important;
+    border-color: #000033 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #D0D0D0 !important;
+    text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+}
+
 .navbar-fixed-bottom {
-  height: 100px;
+  height: 150px;
+}
+
+.primary-view {
+  margin-top: 30px;
+}
+
+.landing-page {
+  color: black;
+  margin-top: 15%;
+  text-align: center;
+  font-family: 'Old Standard TT', serif;
+}
+
+.landing-page img {
+  width: 75px;
+}
+
+.footer {
+  padding: 25px;  
+}
+
+.nav-link img {
+    width: 30px;
 }
 
 .index-item img {
