@@ -1,0 +1,57 @@
+<% @projects_data.each do |data| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1 carousel-column">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <% data[:images].each_with_index do |image, index| %>
+                <% if index == 0 %>
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>  
+                <% else %>
+                  <li data-target="#myCarousel" data-slide-to="#{index}"></li>
+                <% end %>
+              <% end %>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner carousel-image" role="listbox">
+              <% data[:images].each_with_index do |image, index| %>
+                <% if index == 0 %>
+                  <div class="item active">
+                    <%= image_tag(image.image) %>
+                  </div>
+                <% else %>
+                  <div class="item">
+                    <%= image_tag(image.image) %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><br><br>
+      </div>
+    <div class="col-sm-5">
+      <div class="header">
+        <%= data[:title] %><br>
+      </div>
+        <%= data[:description] %><br><br>
+        Funded to date:<br>
+        <%= number_to_currency(data[:funded]/100) %><br>
+        Total cost:<br> 
+        <%= number_to_currency(data[:total_cost]/100) %><br>
+        Projected completion:<br>
+        <%= data[:projected_completion] %>
+    </div>
+  </div>
+</div>
+<% end %>

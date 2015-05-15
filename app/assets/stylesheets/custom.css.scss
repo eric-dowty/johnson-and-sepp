@@ -101,6 +101,14 @@ body {
     margin-top: 50px;
   }
 
+  .carousel-image img {
+    width: 250px;
+  }
+
+  .carousel-column {
+    margin-top: 60px;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width:991px) { 
@@ -142,6 +150,14 @@ body {
     margin-top: 25px;
   }
 
+  .carousel-image img {
+    width: 200px;
+  }
+
+  .carousel-column {
+    margin-top: 50px;
+  }
+
 }
 
 @media (max-width: 767px) { 
@@ -178,6 +194,10 @@ body {
     margin-top: 10px;
   }
 
+  .carousel-image img {
+    width: 100px;
+  }
+
 }
 
 .footer {
@@ -190,4 +210,8 @@ body {
 
 .index-item img {
   width: 100px;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }

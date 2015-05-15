@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      flash[:notice] = "Account created"
+      flash[:notice] = "Account has been created."
       redirect_to home_path
     else
       flash[:errors] = user.errors.full_messages.join(', ')

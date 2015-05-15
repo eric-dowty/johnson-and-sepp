@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
-  resources  :orders, only: [:create, :show]
-  resources   :items, only: [:index] 
-  resources   :users, only: [:new, :create]
-  resources    :cart, only: [:index, :create, :update]
+  resources :investments, only: [:create, :show]
+  resources    :projects, only: [:index] 
+  resources       :users, only: [:new, :create]
+  resources        :cart, only: [:index, :create, :update]
 
   get        '/home', to: 'home#new'
   get       '/about', to: 'home#about'

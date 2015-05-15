@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514011759) do
+ActiveRecord::Schema.define(version: 20150515021208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "images", ["project_id"], name: "index_images_on_project_id", using: :btree
+
+  create_table "investments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "project_id"
+    t.integer "invested_amount"
+  end
+
+  add_index "investments", ["project_id"], name: "index_investments_on_project_id", using: :btree
+  add_index "investments", ["user_id"], name: "index_investments_on_user_id", using: :btree
 
   create_table "items", force: :cascade do |t|
     t.string   "title"
@@ -48,6 +67,21 @@ ActiveRecord::Schema.define(version: 20150514011759) do
   add_index "orders", ["status_id"], name: "index_orders_on_status_id", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "address_line"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.integer  "total_cost",           default: 0
+    t.integer  "funded",               default: 0
+    t.boolean  "discontinue",          default: false
+    t.date     "projected_completion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "statuses", force: :cascade do |t|
     t.string "name"
   end
@@ -58,6 +92,9 @@ ActiveRecord::Schema.define(version: 20150514011759) do
     t.integer "role",            default: 0
   end
 
+  add_foreign_key "images", "projects"
+  add_foreign_key "investments", "projects"
+  add_foreign_key "investments", "users"
   add_foreign_key "order_items", "items"
   add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "statuses"
